@@ -1,6 +1,7 @@
 class WhatsOnWoot::CLI
   
   def call
+    WhatsOnWoot::Scraper.new.get_page
     list_deals
     menu
   end

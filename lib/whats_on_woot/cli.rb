@@ -7,7 +7,7 @@ class WhatsOnWoot::CLI
 
   def list_deals
     puts "What's on Woot?"
-    Deal.all.each_with_index {|deal, i|
+    WhatsOnWoot::Deal.all.each_with_index {|deal, i|
       puts "#{i +1}. #{deal.product}"}
     puts "\n"
   end
@@ -21,12 +21,10 @@ class WhatsOnWoot::CLI
     while input != "exit"
       input = gets.strip
 
-      if input == "1"
-        puts "more info on deal 1"
-      elsif input == "2"
-        puts "more info on deal 2"
-      elsif input == "3"
-        puts "more info on deal 3"
+      if input.to_i > 0 && input.to_i <= WhatsOnWoot::Deal.all.length
+        deal = WhatsOnWoot::Deal.all[input.to_i - 1]
+        puts "#{deal.product}"
+        puts "#{deal.price}"
       elsif input == "exit"
         break
       else

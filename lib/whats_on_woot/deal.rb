@@ -7,6 +7,11 @@ class WhatsOnWoot::Deal
     @@all
   end
 
+  def display_details
+    puts "#{self.product}"
+    puts "is on sale for $#{self.price}."
+  end 
+
   deal_1 = self.new
   deal_1.product = "a fancy computer"
   deal_1.price = "$$$$"

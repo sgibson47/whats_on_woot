@@ -23,8 +23,7 @@ class WhatsOnWoot::CLI
 
       if input.to_i > 0 && input.to_i <= WhatsOnWoot::Deal.all.length
         deal = WhatsOnWoot::Deal.all[input.to_i - 1]
-        puts "#{deal.product}"
-        puts "#{deal.price}"
+        deal.display_details
       elsif input == "exit"
         break
       else

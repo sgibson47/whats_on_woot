@@ -24,6 +24,9 @@ class WhatsOnWoot::CLI
       if input.to_i > 0 && input.to_i <= WhatsOnWoot::Deal.all.length
         deal = WhatsOnWoot::Deal.all[input.to_i - 1]
         deal.display_details
+        puts "\n"
+        puts "Enter another number from the list"
+        puts "to get information on another deal."
       elsif input == "exit"
         break
       else

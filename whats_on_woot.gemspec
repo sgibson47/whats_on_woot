@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["sgibson47"]
   spec.email         = ["sgibson47@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = "A CLI gem to display today's deals from Woot.com & its children"
+  spec.description   = "A CLI gem to display today's deals from Woot.com & its children"
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

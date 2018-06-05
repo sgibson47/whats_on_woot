@@ -8,15 +8,15 @@ class WhatsOnWoot::CLI
 
   def list_deals
     puts "\n"
-    puts "What's on Woot?".colorize("blue")
+    puts "What's on Woot?".colorize(:blue)
     WhatsOnWoot::Deal.all.each_with_index {|deal, i|
-      puts "#{i +1}. #{deal.product}".colorize("blue")}
+      puts "#{i +1}. #{deal.product}"}
     puts "\n"
   end
 
   def menu
-    puts "Enter a number from the list to get more information".colorize("blue")
-    puts "about the corresponding deal, or exit to quit.".colorize("blue")
+    puts "Enter a number from the list to get more information".colorize(:blue)
+    puts "about the corresponding deal, or exit to quit.".colorize(:blue)
     
     input = nil 
 
@@ -27,12 +27,12 @@ class WhatsOnWoot::CLI
         deal = WhatsOnWoot::Deal.all[input.to_i - 1]
         deal.display_details
         puts "\n"
-        puts "Enter another number from the list".colorize("blue")
-        puts "to get information on another deal.".colorize("blue")
+        puts "Enter another number from the list".colorize(:blue)
+        puts "to get information on another deal.".colorize(:blue)
       elsif input == "exit"
         break
       else
-        puts "Please enter a number from the list or exit.".colorize("blue")
+        puts "Please enter a number from the list or exit.".colorize(:blue)
       end
     end
   end

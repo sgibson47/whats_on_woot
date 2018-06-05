@@ -1,18 +1,24 @@
 class WhatsOnWoot::Scraper
+  attr_accessor :deals
 
-  def get_page
-    doc = Nokogiri::HTML(open("https://www.woot.com/"))
-
-    binding.pry 
+  def initialize
+    @deals =[]
+  end
+  
+  def get_page(url)
+    Nokogiri::HTML(open(url))
   end
 
-  def scrape_page
-    #deal_hash ={}
+  
+  def scrape_woot
+    doc = get_page("https://www.woot.com/")
     
-    #deal_hash[:product] = self.get_page.css("h2.main-title.fn").text
-    #deal_hash[:price] = self.get_page.css("span.price").text
-    #deal_hash[:url] = "https://www.woot.com#{self.get_page.css("p.read-more a.url").attribute("href").value}"
-    #deal_hash
+    deal_hash ={}
+    
+    deal_hash[:product] = doc.css("h2.main-title.fn").text
+    deal_hash[:price] = doc.css("span.price").text
+    deal_hash[:url] = "https://www.woot.com#{doc.css("p.read-more a.url").attribute("href").value}"
+    @deals << deal_hash
   end
 
 end

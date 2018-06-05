@@ -8,6 +8,7 @@ class WhatsOnWoot::Deal
   end
 
   def display_details
+    puts "\n"
     puts "#{self.product}"
     puts "is on sale for $#{self.price}."
   end 

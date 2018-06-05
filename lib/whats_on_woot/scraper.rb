@@ -17,8 +17,14 @@ class WhatsOnWoot::Scraper
     scrape_tools
     scrape_sport
     scrape_wine
+    make_deals
   end 
 
+  def make_deals
+    @deals.each do |hash|
+      WhatsOnWoot::Deal.create_from_hash(hash)
+    end
+  end
   
   def scrape_woot
     doc = get_page("https://www.woot.com/")

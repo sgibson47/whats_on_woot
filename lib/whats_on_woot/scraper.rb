@@ -14,6 +14,9 @@ class WhatsOnWoot::Scraper
     scrape_home
     scrape_electronics
     scrape_computers
+    scrape_tools
+    scrape_sport
+    scrape_wine
   end 
   
   def scrape_woot

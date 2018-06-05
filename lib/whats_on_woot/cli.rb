@@ -7,10 +7,8 @@ class WhatsOnWoot::CLI
 
   def list_deals
     puts "What's on Woot?"
-    puts "\n"
-    puts "1. Deal 1"
-    puts "2. Deal 2"
-    puts "3. Deal 3"
+    Deal.all.each_with_index {|deal, i|
+      puts "#{i +1}. #{deal.product}"}
     puts "\n"
   end
 

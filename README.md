@@ -1,28 +1,20 @@
-# WhatsOnWoot
+# WhatsOnWoot CLI Gem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/whats_on_woot`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem scrapes https://www.woot.com, https://www.woot.com/category/home, https://www.woot.com/category/electronics, https://www.woot.com/category/computers, https://www.woot.com/category/tools, https://www.woot.com/category/sport, and https://www.woot.com/category/wine and displays the deals offered on them via a command line interface.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'whats_on_woot'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Enter the following to install this gem: 
 
     $ gem install whats_on_woot
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you've installed the gem, type the following:
+
+    $ whats_on_woot
+
+A list of today's deals should appear. Follow the prompts to learn more about a specific deal. 
 
 ## Development
 
@@ -32,7 +24,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/whats_on_woot.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sgibson47/whats_on_woot.
 
 
 ## License

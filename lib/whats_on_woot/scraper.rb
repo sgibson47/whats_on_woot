@@ -17,10 +17,10 @@ class WhatsOnWoot::Scraper
     scrape_tools
     scrape_sport
     scrape_wine
-    make_deals
   end 
 
   def make_deals
+    scrape_pages
     @deals.each do |hash|
       WhatsOnWoot::Deal.create_from_hash(hash)
     end

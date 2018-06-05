@@ -9,10 +9,11 @@ class WhatsOnWoot::Deal
 
   def display_details
     puts "\n"
-    puts "#{self.product}".colorize(:green)
-    puts "is on sale for #{self.price}.".colorize(:green)
+    puts "Here's the deal:".colorize(:green)
+    puts "#{self.product}"
+    puts "is on sale for #{self.price}."
     puts "Check it out here:".colorize(:green)
-    puts "#{self.url}".colorize(:green)
+    puts "#{self.url}"
   end 
 
   def self.create_from_hash(hash)

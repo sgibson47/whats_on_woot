@@ -1,7 +1,7 @@
 class WhatsOnWoot::CLI
   
   def call
-    WhatsOnWoot::Scraper.new.scrape_woot
+    WhatsOnWoot::Scraper.new.scrape_pages
     list_deals
     menu
   end

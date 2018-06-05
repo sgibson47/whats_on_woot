@@ -3,6 +3,10 @@ class WhatsOnWoot::Deal
 
   @@all =[]
 
+  def self.all
+    @@all
+  end
+
   deal_1 = self.new
   deal_1.product = "a fancy computer"
   deal_1.price = "$$$$"

@@ -15,6 +15,14 @@ class WhatsOnWoot::Deal
     puts "#{self.url}"
   end 
 
+  def self.create_from_hash(hash)
+    thing = WhatsOnWoot::Deal.new
+    hash.each do |k,v|
+      thing.send("#{k}=", v)
+    end
+    @@all<<thing
+  end
+
   deal_1 = self.new
   deal_1.product = "a fancy computer"
   deal_1.price = "$$$$"

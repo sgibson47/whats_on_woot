@@ -18,6 +18,7 @@ class WhatsOnWoot::Scraper
     scrape_sport
     scrape_wine
   end 
+
   
   def scrape_woot
     doc = get_page("https://www.woot.com/")
